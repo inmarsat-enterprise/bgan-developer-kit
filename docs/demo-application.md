@@ -28,7 +28,7 @@ application that:
 
 ## Architecture
 
-![FieldEdge Architecture](./media/idpdevkit-arch.png)
+![FieldEdge Architecture](./media/devkit-arch.png)
 
 The "black box" included in the developer kit consists of a Raspberry Pi
 ("**Pi**") that interfaces to the BGAN satellite modem via Ethernet,
