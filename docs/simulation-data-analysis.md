@@ -63,6 +63,20 @@ LAN.
     >If you have access controls on your LAN network you may need to authorize
     the FieldEdge device as a client.
 
+1. Connect your own Device Under Test to the secondary Ethernet (LAN) port of
+FieldEdge. Your device should be configured to use DHCP, and the FieldEdge will
+act as a DHCP server and perform Network Address Translation (NAT) for your DUT.
+
+    >If your FieldEdge device does not have a secondary Ethernet port you will
+    need a USB/Ethernet adapter connected to the FieldEdge USB. The picture
+    below shows an example of Raspberry Pi 4 as a FieldEdge.
+
+    <img alt="Pi WAN LAN" src="./media/pi-wan-lan.png" width="75%" height="auto">
+
+    >If your DUT does not support DHCP you can reserve a static IP address using
+    the **Router** page of the FieldEdge GUI.
+    See [instructions for Debian](#use-a-reserved-static-ip-for-your-device-under-test-debian).
+
 ## Optional use a Reserved static IP for your Device Under Test (Debian)
 
 >**NOTE** This is only required if your Device Under Test does not support
@@ -125,17 +139,6 @@ turn from grey to red and indicate **ON**.
     interactions so web page responsiveness may be slower while simulating.
 
     <img alt="BGAN Simulation" src="./media/bgan-simulation.png" width="75%" height="auto">
-
-1. Connect your own Device Under Test to the secondary Ethernet (LAN) port of
-FieldEdge. Your device should be configured to use DHCP, and the FieldEdge will
-act as a DHCP server and perform Network Address Translation (NAT) for your DUT.
-
-    >If your FieldEdge device does not have a secondary Ethernet port you will
-    need a USB/Ethernet adapter connected to the FieldEdge USB.
-
-    >If your DUT does not support DHCP you can reserve a static IP address using
-    the **Router** page of the FieldEdge GUI.
-    See [instructions for Debian](#use-a-reserved-static-ip-for-your-device-under-test-debian).
 
 1. Run and observe your application as your normally would.
 
