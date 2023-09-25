@@ -104,7 +104,7 @@ act as a DHCP server and perform Network Address Translation (NAT) for your DUT.
 
     >If your DUT does not support DHCP you can reserve a static IP address using
     the **Router** page of the FieldEdge GUI.
-    See [instructions](#use-a-reserved-static-ip-for-your-device-under-test)
+    See [instructions for Debian](#use-a-reserved-static-ip-for-your-device-under-test-debian).
 
 1. Run and observe your application as your normally would.
 
@@ -124,7 +124,7 @@ for example video.
     * Depending on the application, Viasat may have partner tools or solutions
     to help improve performance. For example video compression and tuning.
 
-### Use a Reserved static IP for your Device Under Test
+### Use a Reserved static IP for your Device Under Test (Debian)
 
 Your device should be configured with an IP address in the `192.168.254.0/24`
 subnet for example `192.168.254.201`.
