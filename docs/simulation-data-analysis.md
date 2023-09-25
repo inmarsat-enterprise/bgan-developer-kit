@@ -71,7 +71,7 @@ act as a DHCP server and perform Network Address Translation (NAT) for your DUT.
     need a USB/Ethernet adapter connected to the FieldEdge USB. The picture
     below shows an example of Raspberry Pi 4 as a FieldEdge.
 
-    <img alt="Pi WAN LAN" src="./media/pi-wan-lan.png" width="75%" height="auto">
+    <img alt="Pi WAN LAN" src="./media/pi-wan-lan.png" width="33%" height="auto">
 
     >If your DUT does not support DHCP you can reserve a static IP address using
     the **Router** page of the FieldEdge GUI.
