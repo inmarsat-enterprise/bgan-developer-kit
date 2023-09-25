@@ -1,19 +1,22 @@
-# Inmarsat BGAN IoT Developer Kit Quick Start
+# Inmarsat BGAN(M2M) IoT Developer Kit Quick Start
 
-<img alt="Developer Kit" src="./docs/media/bgan-dev-kit.png" width="75%" height="auto">
+<img alt="Developer Kit" src="./docs/media/devkit-arch.png" width="75%" height="auto">
 
 The BGAN IoT Developer Kit comes with everything you need to start working with
-Inmarsat's IP IoT messaging service ***BGAN***:
+Inmarsat's IP IoT connectivity service ***BGAN(M2M)***:
     
-* A satellite modem, self-contained with antenna and GPS/GNSS in a weatherproof
+* A satellite modem, self-contained with antenna and GNSS in a weatherproof
 enclosure
 * Cables to connect to AC or 12VC DC power, including an international power
 adapter, cable extenders and a magnetic roof-mount for the satellite modem
 if applicable
 * A single-board computer (SBC) with interface to the satellite modem, which
 provides:
-    * WiFi link between a laptop, tablet or smartphone and the satellite modem
+    * WiFi access point for your laptop, tablet or smartphone to acccess a
+    the FieldEdge Graphical User Interface (GUI)
     * A Graphical User Interface to the satellite modem and SBC
+    * BGAN simulation and packet capture/analysis tools
+    * Router and firewall tools for preventing unexpected data use
     * A simple demo "Edge" application that generates location and modem
     telemetry data and allows sending/receiving text messages
 
@@ -48,6 +51,7 @@ straight to [Modem Activation](docs/modem-activation.md) then
 [Network Data](docs/Network-Data.md)
 
 * [System Overview](docs/system-overview.md)
+* [BGAN Simulation & Data Analysis](docs/simulation-data-analysis.md)
 * [Modem Activation](docs/modem-activation.md)
 * [Kit Installation](docs/kit-installation.md)
 * [Network Data](docs/network-data.md)
@@ -61,5 +65,5 @@ Ensure you have access to the following documentation: (right click links to ope
 1. [**Inmarsat FieldEdge Project**](https://github.com/orgs/inmarsat-enterprise/projects/1)
 with links to the sub-project repositories (see *Details*).
 
-[Back to Top](#Inmarsat-IsatData-Pro-Plug-N-Play-Developer-Kit-Quick-Start)
+[Back to Top](#inmarsat-bganm2m-iot-developer-kit-quick-start)
 
