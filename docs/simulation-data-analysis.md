@@ -2,8 +2,18 @@
 
 The idea of using the BGAN IoT developer kit is to enable you to ensure your
 IoT application works over satellite connectivity in an efficient and
-cost-effective way such that you can scale to mass deployment. The process
-is envisioned as:
+cost-effective way such that you can scale to mass deployment.
+
+**Contents:**
+* [Concept of Operation](#concept-of-operation)
+* [Connect your Device(s) to FieldEdge](#connect-your-devices-to-the-fieldedge)
+    * [(Optional) Use a Reserved/Static IP](#optional-use-a-reserved-static-ip-for-your-device-under-test-debian)
+* [BGAN Simulation](#bgan-simulation)
+* [Packet Capture](#run-a-packet-capture)
+
+## Concept of Operation
+
+The process is envisioned as:
 
 1. Test your application as-is using the *BGAN simulation* feature of the kit.
 Validate that the simulated latency and throughput do not adversely affect your
@@ -24,24 +34,7 @@ include (but not limited to):
     * Apply compression technologies;
     * Apply encryption technologies
 
-## BGAN Simulation
-
-The ***FieldEdge*** device is built on a Linux core and we use native
-Linux *traffic control* techniques to simulate the latency and throughput
-constraints of the BGAN network.
-
-FieldEdge expects to have at least 2 physical Ethernet ports for simulation:
-* **WAN** port connects to your local wired Internet/router
-* **LAN** port connects to your IoT *device under test* ("DUT")
-
-Traffic control runs on both the WAN and LAN port to simulate both directions
-of communication.
-
-BGAN simulation is normally enabled/disabled using the *FieldEdge GUI*, which
-runs automatically on start-up of the FieldEdge device and can be accessed
-via its local WiFi access point.
-
-### Connect to the FieldEdge GUI
+## Connect your Device(s) to the FieldEdge
 
 The WiFi Access Point (WAP) and GUI launch automatically a few minutes after
 FieldEdge system boot.
@@ -69,6 +62,41 @@ LAN.
 
     >If you have access controls on your LAN network you may need to authorize
     the FieldEdge device as a client.
+
+## Optional use a Reserved static IP for your Device Under Test (Debian)
+
+Your device should be configured with an IP address in the `192.168.254.0/24`
+subnet for example `192.168.254.201`.
+
+    >You will need to know the MAC address of your device.
+
+1. Using the FieldEdge GUI select the **Router** tab.
+
+1. Click the **Reserve** button near the upper right of the page.
+
+    <img alt="Reserve Button" src="./media/static-ip-reserve-button.png" width="75%" height="auto">
+
+1. Fill in the form with your selected IP address and the MAC address of
+your device.
+
+    <img alt="Reserve Form" src="./media/static-ip-reserve-form.png" width="75%" height="auto">
+
+## BGAN Simulation
+
+The ***FieldEdge*** device is built on a Linux core and we use native
+Linux *traffic control* techniques to simulate the latency and throughput
+constraints of the BGAN network.
+
+FieldEdge expects to have at least 2 physical Ethernet ports for simulation:
+* **WAN** port connects to your local wired Internet/router
+* **LAN** port connects to your IoT *device under test* ("DUT")
+
+Traffic control runs on both the WAN and LAN port to simulate both directions
+of communication.
+
+BGAN simulation is normally enabled/disabled using the *FieldEdge GUI*, which
+runs automatically on start-up of the FieldEdge device and can be accessed
+via its local WiFi access point.
 
 ### Use the FieldEdge GUI to enable BGAN simulation
 
@@ -124,25 +152,7 @@ for example video.
     * Depending on the application, Viasat may have partner tools or solutions
     to help improve performance. For example video compression and tuning.
 
-### Use a Reserved static IP for your Device Under Test (Debian)
-
-Your device should be configured with an IP address in the `192.168.254.0/24`
-subnet for example `192.168.254.201`.
-
-    >You will need to know the MAC address of your device.
-
-1. Using the FieldEdge GUI select the **Router** tab.
-
-1. Click the **Reserve** button near the upper right of the page.
-
-    <img alt="Reserve Button" src="./media/static-ip-reserve-button.png" width="75%" height="auto">
-
-1. Fill in the form with your selected IP address and the MAC address of
-your device.
-
-    <img alt="Reserve Form" src="./media/static-ip-reserve-form.png" width="75%" height="auto">
-
-### Run a Packet Capture
+## Run a Packet Capture
 
 The next step after getting your basic application connectivity working over
 BGAN simulation, is to capture a packet trace to examine data consumption.
