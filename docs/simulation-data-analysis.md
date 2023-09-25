@@ -65,6 +65,9 @@ LAN.
 
 ## Optional use a Reserved static IP for your Device Under Test (Debian)
 
+>**NOTE** This is only required if your Device Under Test does not support
+DHCP.
+
 Your device should be configured with an IP address in the `192.168.254.0/24`
 subnet for example `192.168.254.201`.
 
